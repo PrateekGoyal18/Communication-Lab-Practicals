@@ -1,0 +1,16 @@
+close all;
+clear all;
+t=0:10*10^(-6):0.001;
+fm1=10^(3);
+x=2*sin(2*pi*fm1*t);
+fc=20*10^(6);
+fs=100*10^(6);
+dph=pi/2;
+ini_phase=0;
+y=pmmod(x,fc,fs,dph,ini_phase);
+subplot(1,2,1);
+plot(x);
+title('message signal');
+subplot(1,2,2);
+plot(y);
+title('phase modulation');
